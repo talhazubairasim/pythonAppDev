@@ -38,38 +38,35 @@ It aims to be clean, modular, and scalable so it can serve as a foundation or de
    ```bash
    git clone https://github.com/talhazubairasim/pythonAppDev.git
    cd pythonAppDev
-Create and activate a virtual environment:
+2. **Create and activate a virtual environment:**
 
-bash
-Copy code
+```bash
 python3 -m venv venv
 source venv/bin/activate   # On Windows: venv\Scripts\activate
-Install dependencies:
+```
+3. **Install dependencies:**
 
-bash
-Copy code
+```bash
 pip install -r requirements.txt
-Configure the application:
-
+```
+3. **Configure the application:**
 Copy example.env to .env
-
 Update database URL, secret keys, and other environment variables.
 
-Initialize the database:
-
-bash
+4. **Initialize the database:**
+````bash
 Copy code
 flask db upgrade   # Or your ORM/migration tool equivalent
-Run the application:
+````
 
-bash
-Copy code
+5. **Run the application:**
+
+```bash
 flask run
+````
 The app will be available at http://127.0.0.1:5000/ (or configured host/port).
 
-🗂 Project Structure
-text
-Copy code
+## 🗂 Project Structure
 pythonAppDev/
 ├── app/                    # Main application package
 │   ├── models.py           # Database models/entities
@@ -83,7 +80,8 @@ pythonAppDev/
 ├── .env                    # Environment variables (not committed)
 ├── config.py               # Configuration settings
 └── README.md               # This file
-✅ Usage Examples
+
+## ✅ Usage Examples
 GET /items – Retrieves list of items
 
 POST /items – Creates a new item with JSON payload
@@ -94,26 +92,25 @@ DELETE /items/{id} – Removes item permanently
 
 (Update endpoints and examples to match your application’s routes.)
 
-🧪 Testing
+## 🧪 Testing
 To run tests:
-
-bash
-Copy code
+````bash
 pytest   # Or the command you use for your test suite
 Ensure your coverage reports, linting and CI configurations (if any) are properly set up.
+````
 
-🚀 Deployment
+## 🚀 Deployment
 Ensure environment variables are configured (e.g., DATABASE_URL, SECRET_KEY).
 
 Use a WSGI server like gunicorn for production:
 
-bash
-Copy code
+````bash
 gunicorn --workers=4 'app:create_app()'
+````
 Optionally containerize with Docker, deploy to cloud or server.
 Add Dockerfile/docker-compose.yml if you have them.
 
-📈 Future Enhancements
+## 📈 Future Enhancements
 Add user authentication (JWT or OAuth)
 
 Build a frontend (React or another JS framework) that uses this backend API
@@ -124,6 +121,6 @@ Improve error handling, monitoring and logging
 
 CI/CD pipeline, linting, code style enforcement, and coverage tracking
 
-📝 Author
+## 📝 Author
 Talha Zubair Asim
 📧 talhazubairasim987@gmail.com
